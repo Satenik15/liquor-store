@@ -1,0 +1,70 @@
+<div>
+    <div class="header__container flex-space-between">
+        <div class="menu-wrapper2">
+            <span [matMenuTriggerFor]="menu" class="material-icons">menu</span>
+            <mat-menu #menu="matMenu">
+                <ul class="list">
+                    <li>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" style="color: black;">home</mat-icon>
+                    </li>
+                    <li *ngFor="let drink of drinks" >
+                        <a mat-menu-item href="javascript:void(0)" [routerLink]="['/', drink.drink]">{{ drink.drink | uppercase }}</a>
+                    </li>
+                </ul>
+            </mat-menu>
+        </div>
+
+        <h3>SC</h3>
+        <ng-container *ngIf="!isLoggedIn, else tmplLogOut">
+            <ul class="user__top__menu flex-center">
+                <li (click)="openSignUpPopup()">{{ 'sign up' | uppercase }}</li>
+                <li (click)="openSignInPopup()">{{ 'sign in' | uppercase }}</li>
+            </ul>
+        
+            <!-- <div class="avatar-wrapper">
+                <img src="https://erasmuscoursescroatia.com/wp-content/uploads/2015/11/no-user.jpg" alt="Avatar" class="avatar" (click)="openCloseDropDown()">
+                <div class="dropdown" *ngIf="openDropDown">
+                    <div class="flex-center" (click)="openSignUpPopup()">
+                        <mat-icon aria-hidden="false" aria-label="Example person_add icon">person_add</mat-icon>
+                        <p>{{ 'sign up' | uppercase }}</p>
+                    </div>
+                    <div class="flex-center" (click)="openSignInPopup()">
+                        <mat-icon aria-hidden="false" aria-label="Example login icon">login</mat-icon>
+                        <p>{{ 'sign in' | uppercase }}</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="menu-wrapper">
+                <span [matMenuTriggerFor]="menu" class="material-icons">menu</span>
+                <mat-menu #menu="matMenu">
+                    <div class="flex-center">
+                        <span class="material-icons">person_add</span>
+                        <button mat-menu-item (click)="openSignUpPopup()">{{ 'sign up' | uppercase }}</button>
+                    </div>
+                    <div class="flex-center">
+                        <span class="material-icons">login</span>
+                        <button mat-menu-item (click)="openSignInPopup()">{{ 'sign in' | uppercase }}</button>
+                    </div>
+                </mat-menu>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="navigation__container">
+        <ul>
+            <li *ngFor="let drink of drinks">
+                <a href="javascript:void(0)" [routerLink]="['/', drink.drink]">{{drink.drink | uppercase}}</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<ng-template #tmplLogOut>
+    <ul class="user__top__menu log__out__form">
+        <li (click)="onLogOut()">{{ 'log out' | uppercase }}</li>
+    </ul>
+</ng-template>
+
+

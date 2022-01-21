@@ -1,0 +1,25 @@
+:host {
+	fill: currentColor;
+	line-height: 1;
+
+	&:active,
+	&:hover {
+		.hoverIcon {
+			display: block;
+		}
+
+		.normalIcon {
+			display: none;
+		}
+	}
+
+	.hoverIcon {
+		display: none;
+	}
+
+	& > svg {
+		& > use {
+			top: -1px;
+		}
+	}
+}

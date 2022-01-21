@@ -1,0 +1,46 @@
+@import '../../../styles/variables.scss';
+
+.categories__section__wrapper {
+    .header {
+        text-align: center;
+
+        p {
+            color: $colorPrimaryGrey;
+        }
+    }
+
+    .body {
+        // background-image: url('../../../assets/alcoholic-drinks/alcoholic-drinks.jpg');
+        background-image: url('../../../assets/alcoholic-drinks/non-alcoholic-drink.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // height: 925px;
+        height: 750px;
+        text-align: center;
+
+        p {
+            font-size: 30px;
+            font-weight: 800;
+            color: $colorSecondaryGreen;
+            opacity: 0.8;
+            padding-top: 30px;
+        }
+
+        .info__section {
+            display: flex;
+            align-items: flex-end;
+            height: 90%;
+            font-weight: 800;
+            font-size: 22px;
+            height: 90%;
+
+            ul {
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
+                color: $colorSecondaryGreen;
+            }
+        }
+    }
+}

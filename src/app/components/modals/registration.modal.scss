@@ -1,0 +1,144 @@
+@import '../../../styles/variables.scss';
+
+.registration__form {
+  text-align: center;
+  position: relative;
+
+  .close{
+    font-size: 44px;
+    position: absolute;
+    right: 0;
+    top: -38px;
+    cursor: pointer;
+    color: $colorPrimaryGrey;
+
+    &:hover {
+      color: $colorPrimarySlateBlue;
+    }
+  }
+
+  h1 {
+    color: $colorPrimarySlateBlue;
+  }
+
+  .subtitle {
+    color: $colorPrimaryGrey;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    gap: 15px;
+    width: 100%;
+
+    div {
+      width: 100%;
+
+      &:last-child {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          color: $colorSecondaryRed;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .input__wrapper {
+      text-align: left;
+      position: relative;
+
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+
+      .mat-icon {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        color: $colorPrimaryGrey;
+      }
+
+      input {
+        padding: 10px;
+        width: calc(100% - 22px);
+        border-radius: 5px;
+        border: 1px solid $colorPrimarySlateBlue;
+    
+        &:focus {
+          outline: none;
+        }
+
+        &.ng-invalid.ng-touched {
+          border: 1px solid $colorSecondaryRed;
+        }
+      }
+
+      span {
+        color: $colorSecondaryRed;
+        font-size: 11px;
+      }
+    }
+  
+    .btn__wrapper {
+      gap: 10px;
+
+      .forgot__password {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        text-align: left;
+      }
+  
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .registration__form {
+
+    .container {
+
+      .btn__wrapper {
+
+        .btn-submit {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .registration__form {
+
+    .container {
+
+      .btn__wrapper {
+        flex-direction: column;
+
+        p {
+          font-size: 9px;
+        }
+
+        .btn-submit {
+          width: 100%;
+        }
+
+        .forgot__password {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

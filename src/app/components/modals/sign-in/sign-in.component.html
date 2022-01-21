@@ -1,0 +1,26 @@
+<div class="registration__form">
+    <span class="close" (click)="onCloseSignInPopup()">&times;</span>
+    <h1>{{"sign in" | uppercase}}</h1>
+    <p class="subtitle">Life is easier with us!</p>
+    <form class="container flex-center-column" [formGroup]='signInForm' (ngSubmit)="onSignIn()">
+        <div class="input__wrapper">
+            <label>Email</label>
+            <input type="email" formControlName="email" placeholder="Email">
+            <span *ngIf="signInForm.get('email').invalid && signInForm.get('email').touched">Invalid email!</span>
+        </div>
+        <div class="input__wrapper">
+            <label>Password</label>
+            <input type="password" formControlName="password" placeholder="Password">
+            <span *ngIf="signInForm.get('password').invalid && signInForm.get('password').touched">Invalid password!</span><br>
+            <span *ngIf="singIn">Please enter valid data!</span>
+        </div>
+        <div class="btn__wrapper flex-space-around">
+            <div class="forgot__password">
+                <p><a>Forgot password?</a></p>
+                <p>Don't have an account yet? <a (click)="openSignUpPopup()">Sign Up</a></p> 
+            </div>
+            <button [disabled]="!signInForm.valid" class="btn-submit" type="submit">{{"sign in" | uppercase}}</button>
+        </div>
+    </form>
+</div>
+

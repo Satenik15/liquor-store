@@ -1,0 +1,96 @@
+<div class="footer__container">
+    <div class="body">
+        <div class="description__section">
+            <h2>logo__SC</h2>
+            <p>Download the app in one click</p>
+            <ul>
+                <li>
+                    <a>
+                        <img src="../../../assets/google-play.png" alt="google-play">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../../../assets/app-store.png" alt="app-store">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div  class="companies__section">
+            <h3>Our Partner Companies</h3>
+            <ul>
+                <li>
+                    <a>Fa Flower</a>
+                </li>
+                <li>
+                    <a>Happy Fruits</a>
+                </li>
+                <li>
+                    <a>Fashion</a>
+                </li>
+                <li>
+                    <a>Little world</a>
+                </li>
+                <li>
+                    <a>Bags world</a>
+                </li>
+            </ul> 
+        </div>
+        <div class="products__section">
+            <h3>Our Products</h3>
+            <ul>
+                <li *ngFor="let product of products">
+                    <a>{{ product.drink }}</a>
+                </li>
+            </ul> 
+        </div>
+        <div class="social__section">
+            <h3>Find Us On</h3>
+            <ul>
+                <!-- <li>
+                    <a>
+                        <img src="../../../assets/facebook_icon.svg" alt="facebook-icon">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../../../assets/instagram-icon.svg" alt="instagram-icon">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../../../assets/linkedin-icon.svg" alt="linkedin-icon">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="../../../assets/twitter-icon.svg" alt="twitter-icon">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="assets/youtube-icon.svg" alt="youtube-icon">
+                    </a>
+                </li> -->
+                <li>
+                    <app-svg-sprite-icon icon="icon-facebook" width="18px" height="20px"></app-svg-sprite-icon>
+                </li>
+                <!-- <li>
+                    <app-svg-sprite-icon icon="icon-twitter" width="25px" height="30px"></app-svg-sprite-icon>
+                </li>
+                <li>
+                    <app-svg-sprite-icon icon="icon-linkedin" width="25px" height="30px"></app-svg-sprite-icon>
+                </li>
+                <li>
+                    <app-svg-sprite-icon icon="icon-youtube" width="25px" height="30px"></app-svg-sprite-icon>
+                </li> -->
+                <!-- <li>
+                    <app-svg-sprite-icon icon="icon-telegram-lp" width="25px" height="30px"></app-svg-sprite-icon>
+                </li> -->
+                <li>
+                    <app-svg-sprite-icon icon="icon-instagram" width="20px" height="23px"></app-svg-sprite-icon>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

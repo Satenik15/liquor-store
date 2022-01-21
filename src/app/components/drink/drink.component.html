@@ -1,0 +1,25 @@
+<div class="drink__container">
+    <div class="description__wrapper flex-space-around">
+        <div  class="details">
+            <h2 class="header text-align-center">{{ drinkModel.title1  }}</h2>
+            <p>{{ drinkModel.description1  }}</p>
+            <!-- <span class="show-more" (click)="show = !show">...show {{show ? 'less' : 'more'}} </span> -->
+        </div>
+        <img src="{{ drinkModel.img1  }}" alt="drink1">
+    </div>
+    <div class="description__wrapper flex-space-around">
+        <img src="{{ drinkModel.img2  }}" alt="drink2" class="display-block">
+        <div  class="details">
+            <h2 class="header text-align-center">{{drinkModel.title2}}</h2>
+            <p>{{ drinkModel.description2  }}</p>
+        </div>
+        <img src="{{ drinkModel.img2  }}" alt="drink2" class="display-none">
+    </div>
+    <div class="description__wrapper flex-space-around">
+        <div  class="details">
+            <h2 class="header text-align-center">{{ drinkModel.title3 }}</h2>
+            <p>{{ drinkModel.description3  }}</p>
+        </div>
+        <img src="{{ drinkModel.img3  }}" alt="drink3">
+    </div>
+</div>

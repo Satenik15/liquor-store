@@ -1,0 +1,118 @@
+@import "../../../styles/variables.scss";
+
+.drink__container {
+    padding: 20px;
+
+    .description__wrapper {
+        padding: 30px 0;
+
+        .details {
+            width: 50%;
+
+            .header {
+                color: $colorSecondaryAero;
+            }
+
+            p {
+                color: $colorSecondaryGrey;
+                font-size: 18px;
+                text-align: justify;
+                // height: 300px;
+                // overflow: hidden;
+
+                // &.show {
+                //     overflow: visible;
+                //     height: auto;
+                // }
+            }
+
+            // .show-more {
+            //     cursor: pointer;
+            //     display: block;
+            //     text-align: end;
+            //     color: $colorSecondaryGreen;
+            // }
+        }
+
+        img {
+            width: 350px;
+        }
+
+        .display-none {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .drink__container {
+
+        .description__wrapper {
+
+            .details {
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            img {
+                width: 280px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .drink__container {
+
+        .description__wrapper {
+            flex-direction: column;
+            padding-bottom: 50px;
+            gap: 20px;
+
+            .details {
+                width: 100%;
+            }
+
+            .display-none {
+                display: block;
+            }
+
+            .display-block {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .drink__container {
+
+        .description__wrapper {
+
+            .details {
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            img {
+                width: 220px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .drink__container {
+
+        .description__wrapper {
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}

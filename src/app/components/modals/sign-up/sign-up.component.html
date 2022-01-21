@@ -1,0 +1,33 @@
+<div class="registration__form">
+    <span class="close" (click)="onCloseSignUpPopup()">&times;</span>
+    <h1>{{"sign up" | uppercase}}</h1>
+    <p class="subtitle">Make your best choice with us!</p>
+    <form class="container flex-center-column" [formGroup]='signUpForm' (ngSubmit)="onSignUp()">
+        <div class="input__wrapper">
+            <label>Username</label> 
+            <input type="text" formControlName="username" placeholder="Username" formControlName="username">
+            <span *ngIf="signUpForm.get('username').invalid && signUpForm.get('username').touched">Invalid username!</span>
+        </div>
+        <div class="input__wrapper">
+            <label>Email</label>
+            <input type="email" formControlName="email" placeholder="Email" formControlName="email">
+            <span *ngIf="signUpForm.get('email').invalid && signUpForm.get('email').touched">Invalid email!</span>
+        </div>
+        <div class="input__wrapper">
+            <label>Password</label>
+            <input type="password" formControlName="password" placeholder="Password" formControlName="password">
+            <span *ngIf="signUpForm.get('password').invalid && signUpForm.get('password').touched">Invalid password!</span>
+        </div>
+        <div class="input__wrapper">
+            <label>Repeat password</label>
+            <input type="password" formControlName="confirmPassword" placeholder="Confirm password" formControlName="confirmPassword">
+            <span *ngIf="signUpForm.get('confirmPassword').invalid && signUpForm.get('confirmPassword').touched">Invalid password!</span><br>
+            <!-- <span *ngIf="signUpForm.invalid">Please enter valid data!</span> -->
+        </div>
+        <div class="btn__wrapper flex-space-around">
+            <p>Already have an account? <a (click)="openSignInPopup()"> Sign in</a></p>
+            <button [disabled]="signUpForm.invalid" class="btn-submit" type="submit">{{"sign up" | uppercase}}</button>
+        </div>
+    </form>
+</div>
+
